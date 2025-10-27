@@ -4,8 +4,8 @@
   "framework": null,
   "installCommand": "npm install",
   "functions": {
-    "backend/hono.ts": {
-      "runtime": "edge"
+    "api/**/*.ts": {
+      "runtime": "nodejs20.x"
     }
   },
   "env": {
@@ -14,7 +14,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/backend/hono.ts"
+      "destination": "/api"
     },
     {
       "source": "/(.*)",
